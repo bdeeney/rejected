@@ -8,3 +8,6 @@ dist
 tests/cover
 cover
 atlassian-ide-plugin.xml
+
+*.egg
+/env/
