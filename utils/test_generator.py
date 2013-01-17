@@ -1,4 +1,5 @@
 """Generate test messages for the example consumer."""
+import logging
 import random
 import time
 import uuid
@@ -6,6 +7,10 @@ import uuid
 from pika.adapters import BlockingConnection
 from pika.connection import ConnectionParameters
 from pika import BasicProperties
+
+LOG_FORMAT = ('%(levelname) -10s %(asctime)s %(name) -30s %(funcName) '
+              '-35s %(lineno) -5d: %(message)s')
+logging.basicConfig(level=logging.DEBUG, format=LOG_FORMAT)
 
 MESSAGE_COUNT = 100
 
